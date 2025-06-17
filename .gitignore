@@ -1,0 +1,72 @@
+# -----------------------------
+# Ignore MURAS
+# -----------------------------
+
+# Logs
+*.log
+
+# Sistema Operacional
+.DS_Store
+Thumbs.db
+
+# ===========================
+# Frontend (Angular - 1-frontend)
+# ===========================
+
+1-frontend/**/node_modules/
+1-frontend/**/dist/
+1-frontend/**/out-tsc/
+1-frontend/**/.angular/
+1-frontend/**/coverage/
+1-frontend/**/.env
+1-frontend/**/.env.*
+
+# ===========================
+# Backend (C# - 2-backend)
+# ===========================
+
+# Output de build
+2-backend/**/bin/
+2-backend/**/obj/
+2-backend/**/TestResults/
+2-backend/**/artifacts/
+
+# Visual Studio e IDEs
+2-backend/**/.vs/
+2-backend/**/*.user
+2-backend/**/*.suo
+2-backend/**/*.userosscache
+2-backend/**/*.userprefs
+2-backend/**/*.Cache
+2-backend/**/*.dbmdl
+
+# Pacotes NuGet locais
+2-backend/**/packages/
+2-backend/**/.nuget/
+
+# Publicações
+2-backend/**/*.publishsettings
+
+# Arquivos de lock antigos
+2-backend/**/project.lock.json
+2-backend/**/project.fragment.lock.json
+
+# ===========================
+# Database scripts / dumps / backups (opcional)
+# ===========================
+
+3-database/**/*.bak
+3-database/**/*.mdf
+3-database/**/*.ldf
+3-database/**/*.sql
+
+# ===========================
+# Ignore global de IDEs / Tools
+# ===========================
+
+.vscode/
+.idea/
+*.iml
+
+# Git próprio
+.git/
