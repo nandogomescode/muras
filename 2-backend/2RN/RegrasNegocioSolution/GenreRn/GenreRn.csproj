@@ -8,10 +8,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.Data.SqlClient" Version="6.0.2" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Reference Include="DataAccessLayer">
       <HintPath>..\..\..\Bin\Debug\net9.0\DataAccessLayer.dll</HintPath>
     </Reference>
