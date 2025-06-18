@@ -1,10 +1,10 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
+    <OutputType>Exe</OutputType>
     <TargetFramework>net9.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <BaseOutputPath>C:\code\Portfolio\veras-cifras\2-backend\Bin</BaseOutputPath>
   </PropertyGroup>
 
   <ItemGroup>
@@ -12,11 +12,20 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Reference Include="ArtistRn">
+      <HintPath>..\..\..\Bin\Debug\net9.0\ArtistRn.dll</HintPath>
+    </Reference>
     <Reference Include="DataAccessLayer">
       <HintPath>..\..\..\Bin\Debug\net9.0\DataAccessLayer.dll</HintPath>
     </Reference>
     <Reference Include="DbManipulation">
       <HintPath>..\..\..\Bin\Debug\net9.0\DbManipulation.dll</HintPath>
+    </Reference>
+    <Reference Include="GenreRn">
+      <HintPath>..\..\..\Bin\Debug\net9.0\GenreRn.dll</HintPath>
+    </Reference>
+    <Reference Include="MusicRn">
+      <HintPath>..\..\..\Bin\Debug\net9.0\MusicRn.dll</HintPath>
     </Reference>
   </ItemGroup>
 

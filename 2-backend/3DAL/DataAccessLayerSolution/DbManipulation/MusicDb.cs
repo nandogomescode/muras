@@ -1,12 +1,30 @@
-﻿using System;
+﻿using DataAccessLayer.DalConnections;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DbManipulation.Music
-{
-    class MusicDb
-    {
+namespace DbManipulation.Music{
+
+    public class MusicDb : DalConnections{
+
+        public long Create() {
+
+			try {
+
+                long musicId = 0;
+
+                string command = $@"";
+
+                return musicId;
+
+			} catch(Exception) {
+
+				throw;
+			}
+
+        }
+
     }
 }
