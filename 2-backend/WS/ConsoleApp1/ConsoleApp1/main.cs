@@ -21,14 +21,7 @@ internal class main {
 
         do {
 
-            Console.Write(@"
-0) Sair do programa
-1) Menu de artistas
-2) Menu de gêneros musicais
-3) Menu de albuns 
-4) Menu de músicas
-
-Digite sua opção: ");
+            Console.Write("0) Sair do programa\n1) Menu de artistas\n2) Menu de gêneros musicais\n3) Menu de albuns\n4) Menu de músicas\n\nDigite sua opção: ");
         
             menu = Convert.ToInt32(Console.ReadLine());
 
