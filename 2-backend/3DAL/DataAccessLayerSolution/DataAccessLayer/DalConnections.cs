@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Data;
+using System.Reflection.Metadata;
 using Microsoft.Data.SqlClient;
 
 namespace DataAccessLayer.DalConnections {
@@ -44,11 +45,38 @@ namespace DataAccessLayer.DalConnections {
             }
         }
 
+        protected string Get(string query) {
+
+            try {
+
+                string outParam = string.Empty;
+
+                using(SqlConnection connection = new SqlConnection(this.connectionString)) {
+
+                    SqlCommand command = new SqlCommand(query,connection);
+                    
+                    using(SqlDataReader reader = command.ExecuteReader()) {
+
+                        outParam = reader[0].ToString();
+
+                    }
+
+                };
+
+                return outParam;
+
+            } catch(Exception) {
+
+                throw;
+            }
+
+        }
+
         protected void ExecuteQuery(string query) {
 
             try {
 
-                using(SqlConnection connection = new SqlConnection(connectionString)) {
+                using(SqlConnection connection = new SqlConnection(this.connectionString)) {
 
                     try {
 
@@ -82,5 +110,6 @@ namespace DataAccessLayer.DalConnections {
                 return 0;
 
         }
+
     }
 }
