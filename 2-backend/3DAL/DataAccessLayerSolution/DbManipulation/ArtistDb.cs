@@ -34,9 +34,7 @@ namespace DbManipulation.Artist{
             DebutYear = null;
             IsActive = true;   
 
-
         }
-
     }
 
     public class ArtistDbService : DalConnections {
