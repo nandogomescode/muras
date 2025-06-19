@@ -13,7 +13,7 @@ namespace GenreRn {
         public void CreateNewGenre(GenreRecord record)
         {
 
-            GenreDbService genreDbService = new GenreDbService();             
+            GenreService genreDbService = new GenreService();             
 
             genreDbService.Create(record);
 

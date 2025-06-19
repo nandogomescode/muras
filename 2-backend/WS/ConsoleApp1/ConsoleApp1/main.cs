@@ -1,20 +1,27 @@
-﻿using ConsoleApp1;
-using Microsoft.Data.SqlClient;
+﻿using Microsoft.Data.SqlClient;
 using MusicRn;
 using System.Data;
 using DbManipulation.Genre;
 using GenreRn;
 using DbManipulation.Artist;
 using ArtistRn;
+using BackendManagerConsole;
 
-internal class Program {
+internal class main {
 
     private static void Main(string[] args) {
+
+        Album albumObj = new Album();
+        Musica musicaObj = new Musica();
+        Genero generoObj = new Genero();
+        Artista artistaObj = new Artista();
 
         int menu = 0;
         string response = string.Empty;
 
-        Console.Write(@"
+        do {
+
+            Console.Write(@"
 0) Sair do programa
 1) Menu de artistas
 2) Menu de gêneros musicais
@@ -23,41 +30,39 @@ internal class Program {
 
 Digite sua opção: ");
         
-        menu = Convert.ToInt32(Console.ReadLine());
+            menu = Convert.ToInt32(Console.ReadLine());
 
-        switch(menu) {
+            switch(menu) {
 
-            case 0: return;                
-            case 1:
-                AdicionarArtista();
-                break;
-            case 2:
-                AdicionarGenero();
-                break;
-            default:
-                Console.WriteLine("Opção inválida!");
-                break;
+                case 0: return;                
+                case 1:
+                    artistaObj.ArtistMenu();                
+                    break;
+                case 2:
+                    generoObj.GeneroMenu();
+                    break;
+                case 3:
+                    albumObj.AlbumMenu();
+                    break;
+                case 4:
+                    musicaObj.MusicaMenu();
+                    break;  
+                default:
+                    Console.WriteLine("Opção inválida!");
+                    break;
 
-        }
+            }
 
-        Console.ReadLine();
+            Console.WriteLine("Deseja sair?");
+            response = Console.ReadLine();
+
+        } while(!(response.Equals("Sim") || response.Equals("S") || response.Equals("s") || response.Equals("YES") || response.Equals("Y") || response.Equals("y")));
+
+
+        Console.Read();
         
     }
 
-    private static void AdicionarGenero() {
-
-        GenreRecord record = new GenreRecord();
-        CreateMusicGenre create = new CreateMusicGenre();
-
-        Console.Write("Digite o nome do gênero que deseja adicionar: ");
-        record.GenreName = Console.ReadLine();
-
-        Console.Write("Digite a descrição do gênero que deseja adicionar: ");
-        record.Description = Console.ReadLine();
-
-        create.CreateNewGenre(record);
-
-    }
 
     private static void AdicionarArtista() {
 
