@@ -31,10 +31,10 @@ namespace BackendManagerConsole{
                     AdicionarGenero();
                     break;
                 case 2:
-                    AdicionarGenero();
+                    AtualizarGenero();
                     break;
                 case 3:
-                    AdicionarGenero();
+                    DeletarGenero();
                     break;
                 case 4:
                     ListarGeneros();
@@ -43,10 +43,9 @@ namespace BackendManagerConsole{
                     Console.WriteLine("Número invalido!");
                     break;
             }
-
         }
 
-        public void AdicionarGenero() {
+        private void AdicionarGenero() {
 
             Console.Write("Digite o nome do gênero que deseja adicionar: ");
             record.GenreName = Console.ReadLine();
@@ -58,21 +57,20 @@ namespace BackendManagerConsole{
 
         }
 
-        public void AtualizarGenero() {
+        private void AtualizarGenero() {
 
-        }
-
-        public void DeletarGenero() {
-
-
-        }
-
-        public void ListarGeneros() {
 
 
         }
 
+        private void DeletarGenero() {
 
+
+        }
+
+        private void ListarGeneros() {
+
+
+        }
     }
-
 }
