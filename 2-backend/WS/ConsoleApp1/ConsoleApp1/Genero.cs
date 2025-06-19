@@ -20,7 +20,7 @@ namespace BackendManagerConsole{
         public void GeneroMenu() {
 
             Console.Clear();
-            Console.Write("0) Retornar ao Menu principal\n1)Adicionar gênero: ");
+            Console.Write("0) Retornar ao Menu principal\n1) Adicionar um gênero: \n2) Atualizar um gênero\n3) Deletar um gênero\n4) Listar gêneros\n\nDigite sua opção: ");
             option = Convert.ToInt16(Console.ReadLine());
 
             switch(option) {
@@ -29,6 +29,15 @@ namespace BackendManagerConsole{
                     return;
                 case 1:
                     AdicionarGenero();
+                    break;
+                case 2:
+                    AdicionarGenero();
+                    break;
+                case 3:
+                    AdicionarGenero();
+                    break;
+                case 4:
+                    ListarGeneros();
                     break;
                 default:
                     Console.WriteLine("Número invalido!");
@@ -49,5 +58,21 @@ namespace BackendManagerConsole{
 
         }
 
+        public void AtualizarGenero() {
+
+        }
+
+        public void DeletarGenero() {
+
+
+        }
+
+        public void ListarGeneros() {
+
+
+        }
+
+
     }
+
 }
