@@ -43,9 +43,11 @@ namespace DbManipulation.Album{
 
     public class AlbumService : DalConnections { 
     
-        public void Get() {
+        public void Get(long Id) {
 
             try {
+
+                string command = $@"SELECT * FROM ALBUM WHERE Album_Id = {Id}";
 
 
 

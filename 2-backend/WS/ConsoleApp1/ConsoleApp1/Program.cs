@@ -12,12 +12,22 @@ internal class Program {
     private static void Main(string[] args) {
 
         int menu = 0;
+        string response = string.Empty;
 
-        Console.WriteLine("1) Adicione um artista:\n2)Adicione um gênero:");
+        Console.Write(@"
+0) Sair do programa
+1) Menu de artistas
+2) Menu de gêneros musicais
+3) Menu de albuns 
+4) Menu de músicas
+
+Digite sua opção: ");
+        
         menu = Convert.ToInt32(Console.ReadLine());
 
         switch(menu) {
 
+            case 0: return;                
             case 1:
                 AdicionarArtista();
                 break;
@@ -30,7 +40,7 @@ internal class Program {
 
         }
 
-        Console.Read();
+        Console.ReadLine();
         
     }
 
@@ -69,4 +79,51 @@ internal class Program {
         service.CreateNewArtist(record);
 
     }
+
+    private static void MenuArtistas() {
+
+        try {
+
+
+
+        } catch(Exception) {
+
+            throw;
+        }
+
+    }
+
+    private static void MenuGeneros() {
+
+        try {
+
+        } catch(Exception) {
+
+            throw;
+        }
+
+    }
+
+    private static void MenuAlbuns() {
+
+        try {
+
+        } catch(Exception) {
+
+            throw;
+        }
+
+    }
+
+    private static void MenuMusicas() {
+
+        try {
+
+        } catch(Exception) {
+
+            throw;
+        }
+
+    }
+
 }
