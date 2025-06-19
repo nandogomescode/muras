@@ -7,7 +7,13 @@ using System.Threading.Tasks;
 
 namespace DbManipulation.Music{
 
-    public class MusicDb : DalConnections{
+    public class MusicRecord() {
+
+
+
+    }
+
+    public class MusicService : DalConnections{
 
         public long Create() {
 
