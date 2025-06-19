@@ -31,7 +31,7 @@ namespace DbManipulation.Genre {
 
     }
     
-    public class GenreDbService : DalConnections {
+    public class GenreService : DalConnections {
 
 
         public long Create(GenreRecord record) {
