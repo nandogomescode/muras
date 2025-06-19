@@ -56,25 +56,4 @@ internal class main {
         
     }
 
-
-    private static void AdicionarArtista() {
-
-        ArtistRecord record = new ArtistRecord();
-        CreateArtist service = new CreateArtist();
-
-        Console.Write("Digite o nome do artista que deseja adicionar: ");
-        record.ArtistName = Console.ReadLine();
-
-        Console.Write("Digite a bio do artista que deseja adicionar: ");
-        record.ArtistBio = Console.ReadLine();
-
-        Console.Write("Digite o país do artista que deseja adicionar: ");
-        record.Country = Console.ReadLine();
-
-        Console.Write("Digite o ano do artista que deseja adicionar: ");
-        record.DebutYear = Convert.ToInt32(Console.ReadLine());
-
-        service.CreateNewArtist(record);
-
-    }
 }
