@@ -102,6 +102,32 @@ namespace DataAccessLayer.DalConnections {
 
         }
 
+        protected DataTable GetTable(string query) {
+
+            try {
+
+                DataTable table = new DataTable();
+
+                using(SqlConnection connection = new SqlConnection(connectionString)) {
+
+                    using(SqlCommand command = new SqlCommand(query, connection)) {
+
+                        using(SqlDataAdapter adapter = new SqlDataAdapter(command)) {
+
+                            adapter.Fill(table);
+
+                        }
+                    }
+                }
+
+                return table;
+
+            } catch(Exception) {
+
+                throw;
+            }
+        }
+
         protected int BooleanFormat(bool value) {
 
             if(value)
